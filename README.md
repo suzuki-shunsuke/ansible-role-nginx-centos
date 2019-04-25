@@ -10,7 +10,7 @@ https://galaxy.ansible.com/suzuki-shunsuke/nginx_centos
 
 The role only install Nginx.
 The role doesn't configure Nginx because it is difficult to configure Nginx generally and simply.
-Some Ansible role (ex. [nginxinc.nginx](https://github.com/nginxinc/ansible-role-nginx) and [geerlingguy.nginx](https://github.com/geerlingguy/ansible-role-nginx)) configures Nginx but they are too complicated and learning cost is too high.
+Some Ansible roles (ex. [nginxinc.nginx](https://github.com/nginxinc/ansible-role-nginx) and [geerlingguy.nginx](https://github.com/geerlingguy/ansible-role-nginx)) configure Nginx but they are too complicated and learning cost is too high.
 
 ## Role Variables
 
