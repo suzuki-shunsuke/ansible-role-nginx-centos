@@ -1,0 +1,26 @@
+---
+dependency:
+  name: galaxy
+  options:
+    role-file: roles.yml
+driver:
+  name: docker
+lint:
+  name: yamllint
+platforms:
+  - name: instance
+    image: suzukishunsuke/ansible-test-centos:0.1.0
+    privileged: true
+    command: /sbin/init
+    env:
+      USER: foo
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+scenario:
+  name: default
+verifier:
+  name: testinfra
+  lint:
+    name: flake8

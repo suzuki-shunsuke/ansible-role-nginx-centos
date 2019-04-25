@@ -1,0 +1,16 @@
+---
+- name: add RPM nginx signing key
+  rpm_key:
+    key: "{{ nginx_rpm_key }}"
+- name: add nginx repository
+  yum_repository:
+    name: nginx
+    baseurl: "{{ nginx_repository }}"
+    description: NGINX Repository
+    enabled: true
+    gpgcheck: true
+- name: install nginx
+  package:
+    name: nginx
+    state: present
+  notify: start nginx
